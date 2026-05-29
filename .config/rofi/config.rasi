@@ -1,0 +1,68 @@
+/* 1. ОТКЛЮЧАЕМ ДЕФОЛТНУЮ ТЕМУ (это уберет кремовый цвет) */
+@theme "/dev/null"
+
+configuration {
+  
+    modi: "drun,run";
+    show-icons: false;
+    drun-display-format: "{name}";
+}
+
+/* 2. ГЛОБАЛЬНЫЕ ЦВЕТА */
+* {
+    /* Прозрачность в HEX: 00 в конце - это 0% непрозрачности */
+    background-color: #00000000; 
+    text-color: #FFFFFF;
+    font: "JetBrains Mono 12";
+}
+
+/* 3. ОКНО */
+window {
+    transparency: "real";
+    background-color: #00000066; /* Темный фон 40% для блюра */
+    border-radius: 12px;
+    width: 26%;
+    padding: 19px;
+    border: 0px;
+}
+
+/* 4. СПИСОК */
+listview {
+    lines: 8;
+    fixed-height: 0;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 0px 0px;
+}
+
+/* 5. ЭЛЕМЕНТЫ (ТО САМОЕ МЕСТО) */
+element {
+    padding: 8px;
+    border-radius: 8px;
+    /* Даем чуть-чуть белого (10%), чтобы Picom размывал это место */
+    background-color: #FFFFFF1A; 
+}
+
+/* В НОВЫХ ВЕРСИЯХ НУЖНО ЯВНО УКАЗЫВАТЬ ЦВЕТ ДЛЯ ЭТИХ ДВУХ: */
+element-text, element-icon {
+    background-color: #00000000;
+    text-color:       inherit;
+}
+
+element selected {
+    background-color: #FFFFFF33; /* 20% белого при выборе */
+    text-color: #FFFFFF;
+}
+
+/* 6. ПОЛЕ ВВОДА */
+inputbar {
+    padding: 10px;
+    background-color: #FFFFFF0D;
+    border-radius: 8px;
+    children: [ "entry" ];
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: #888888;
+}
