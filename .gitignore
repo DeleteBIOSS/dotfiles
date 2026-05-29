@@ -1,0 +1,9 @@
+*.token
+*.secret
+.env
+secrets/
+
+*~
+*.swp
+*.swo
+.DS_Store
