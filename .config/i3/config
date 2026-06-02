@@ -185,11 +185,10 @@ client.background       #FFFFFF
 exec --no-startup-id flameshot
 bindsym Mod1+r exec --no-startup-id flameshot gui
 #PICOM
-exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 #Polybar
-exec --no-startup-id polybar example
-
+exec --no-startup-id ~/.config/polybar/launch.sh
 #PYWAL
 exec_always --no-startup-id ~/.config/wal/wal-theme-switcher.sh --reload
 bindsym $mod+Shift+a exec --no-startup-id ~/.local/bin/wal-select.sh
@@ -215,3 +214,7 @@ exec_always --no-startup-id xset -dpms
 bindsym $mod+Shift+p exec "sudo wg-quick up wg0-client-nk
 #Off
 bindsym	$mod+Shift+o exec "sudo	wg-quick down wg0-client-nk
+
+exec --no-startup-id blueman-applet
+# Firefox
+bindsym $mod+Shift+f exec firefox
