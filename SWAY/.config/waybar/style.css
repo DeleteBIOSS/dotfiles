@@ -1,0 +1,33 @@
+@import "../theme/colors-waybar.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Hack", sans-serif;
+    font-size: 12px;
+    color: @foreground;          /* был #a7c5e2 */
+    background: transparent;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: alpha(@background, 0.7);  /* был rgba(0, 43, 54, 0.7) */
+    border-radius: 6px;
+    margin: 4px 6px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    background: transparent;
+    color: @foreground;          /* был #93a1a1, теперь тоже светлый */
+}
+
+#workspaces button.active {
+    color: @background;          /* был #002b36 */
+    background: @foreground;     /* был #bcc3c3 */
+    border-radius: 4px;
+}
+
+#clock, #pulseaudio, #tray {
+    padding: 0 8px;
+    color: @foreground;          /* добавлено, чтобы наследовать цвет */
+}
