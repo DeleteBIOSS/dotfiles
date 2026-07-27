@@ -1,0 +1,14 @@
+btop
+fastfetch
+ranger
+vi
+vim
+git
+firefox
+curl
+wget
+nmap
+zip
+unzip
+openssh
+kitty
