@@ -1,0 +1,4 @@
+[templates]
+kitty = { template = 'colors-kitty.conf', target = '~/.config/kitty/colors-wallust.conf' }
+waybar = { template = 'waybar-colors.css', target = '~/.config/theme/colors-waybar.css' }
+wofi = { template = 'wofi-style.css', target = '~/.config/wofi/style.css' }

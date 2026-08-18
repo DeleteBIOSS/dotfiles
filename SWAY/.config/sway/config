@@ -8,16 +8,15 @@ set $left h
 set $down j
 set $up k
 set $right l
-bindsym $mod+Shift+a exec ~/.config/wal/wal-select.sh
-exec ~/.config/wal/wal-theme-switcher.sh
-# exec swaybg -i /home/bios/Wallpapers/Oboi.png -m fill
+exec swww init
+exec sleep 0.5 && ~/.config/wallust/wal-theme-switcher.sh
 
 exec waybar
 
 input * {
 	xkb_layout us,ru
 	xkb_options grp:alt_shift_toggle
-	repeat_delay 200
+	repeat_delay 201
 	repeat_rate 50
 }
 
@@ -37,7 +36,7 @@ input * {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
@@ -175,6 +174,9 @@ bindsym $mod+r mode "resize"
 
     # Special key to take a screenshot with grim
     bindsym Mod1+r exec grim -g "$(slurp)" - | wl-copy
+
+    # Smena Oboev
+    bindsym $mod+Shift+a exec ~/.config/wallust/wal-select.sh
 
 
 include /etc/sway/config.d/*
