@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 WALLPAPER_DIR="$HOME/Wallpapers"
 
 if [ ! -d "$WALLPAPER_DIR" ]; then
@@ -30,20 +30,16 @@ for img in "${IMAGES[@]}"; do
     fi
 done
 
-# Применяем обои через swww
-if pgrep -x swww-daemon > /dev/null; then
-    swww img "$CHOSEN_PATH"
-else
-    swww init && sleep 0.5 && swww img "$CHOSEN_PATH"
-fi
+# Устанавливаем обои через awww
+awww img "$CHOSEN_PATH"
 
-# Сохраняем путь
+# Сохраняем путь к текущим обоям
 echo "$CHOSEN_PATH" > ~/.cache/wallust/last_wallpaper
 
-# Генерируем цвета
+# Генерируем цветовую схему wallust
 wallust run "$CHOSEN_PATH"
 
-# Перезапускаем Waybar, чтобы применились новые цвета
+# Перезапускаем Waybar (чтобы подхватил новые цвета из colors-waybar.css)
 pkill -SIGUSR2 waybar 2>/dev/null
 
 echo "Обои обновлены: $CHOSEN_NAME"
