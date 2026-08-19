@@ -10,7 +10,6 @@ set $up k
 set $right l
 exec awww-daemon
 exec sleep 0.5 && ~/.config/wallust/wal-theme-switcher.sh
-
 exec waybar
 
 input * {
@@ -177,6 +176,12 @@ bindsym $mod+r mode "resize"
 
     # Smena Oboev
     bindsym $mod+Shift+a exec ~/.config/wallust/wal-select.sh
+
+### Border colors
+#                        border       background   text         indicator    child_border
+client.focused           $accent      $accent      $background  $accent      $accent
+client.focused_inactive  $background  $background  $foreground  $background  $background
+client.unfocused         $background  $background  $foreground  $background  $background
 
 
 include /etc/sway/config.d/*

@@ -9,6 +9,7 @@ if [ -f "$WALLPAPER" ]; then
 
     # Запускаем awww и ставим обои
     awww img "$WALLPAPER"
+swaymsg reload
 else
     echo "Файл обоев не найден: $WALLPAPER"
 fi

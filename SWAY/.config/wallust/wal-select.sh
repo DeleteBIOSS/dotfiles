@@ -43,3 +43,4 @@ wallust run "$CHOSEN_PATH"
 pkill -SIGUSR2 waybar 2>/dev/null
 
 echo "Обои обновлены: $CHOSEN_NAME"
+swaymsg reload

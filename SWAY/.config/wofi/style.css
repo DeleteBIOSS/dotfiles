@@ -1,9 +1,10 @@
+@import "/home/bios/.config/wofi/colors-wallust.css";
 window {
     font-family: "JetBrainsMono Nerd Font", "Hack", sans-serif;
     font-size: 12px;
-    background: #12110e;
-    opacity: 0.9;
-    border: 1px solid #d7d6cd;
+    background: @background;
+    opacity: 2;
+    border: 1px solid @foreground;
     border-radius: 8px;
 }
 
@@ -12,13 +13,13 @@ window {
 }
 
 #input {
-    background: #12110e;
-    opacity: 0.6;
+    background: @background;
+    opacity: 0.9;
     border: none;
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 8px;
-    color: #d7d6cd;
+    color: @foreground;
 }
 
 #scroll {
@@ -28,12 +29,12 @@ window {
 #entry {
     padding: 6px 10px;
     margin: 2px 0;
-    color: #d7d6cd;
+    color: @foreground;
 }
 
 #entry:selected {
-    background: #d7d6cd;
-    opacity: 0.4;
-    color: #12110e;
+    background: @foreground;
+    opacity: 0.9;
+    color: @background;
     border-radius: 4px;
 }
